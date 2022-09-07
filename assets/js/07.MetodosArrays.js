@@ -5,8 +5,11 @@ const frutas=['sandia',
               'pera',
               'melon',
               'uva',
-              'sandia'
+              'sandia',
+              'banana'
             ]
+//document.write(frutas)
+  
 const verduras=['lechuga',
                 'pepino',
                 'tomate'
@@ -59,152 +62,180 @@ const empresa=[
 //CONCAT : Nos une dos arrays o añade 
 //elementos al array 
 
-//console.log(frutas.concat('limón'))
+//console.log(frutas.concat('limon'))
+//console.log(frutas.concat(verduras))
+//console.log(frutas)
 
 //EVERY : nos obliga a que todos los elementos 
 //del array cumplan una determinada condición 
-
-// frutas.every(fruta => {
-//     console.log(fruta=='sandia')
-// })
+/*
+ frutas.every(fruta => {
+     console.log(fruta=='sandia')
+ })
+ */
 
 //SOME: Nos devuelve elemento por elemento si son true 
 //o false 
-
-// frutas.some(fruta => {
-//     console.log(fruta==='sandia')
-// })
+/*
+frutas.some(fruta => {
+    console.log(fruta==='sandia')
+ })
+ */
 
 //FILTER:Nos filtra el array y nos devuelve otro 
 //array con las condiciones que le indiquemos 
-
-// frutas.filter(fruta => {
-//     if(fruta.length>5){
-//         console.log(`${fruta} tiene más de 5 caracteres`)
-//     }else{
-//         console.log(`${fruta} tiene menos de 5 carácteres`)
-//     }
-// })
+/*
+ frutas.filter(fruta => {
+     if(fruta.length>5){
+         console.log(`${fruta} tiene más de 5 caracteres`)
+     }else{
+         console.log(`${fruta} tiene menos de 5 carácteres`)
+     }
+ })
+*/
 
 //FIND: nos busca las coincidencias que le digamos
-
-// frutas.find(fruta=>{
-//     if(fruta ==='sandia'){
-//         console.log(fruta)
-//     }
-// })
+/*
+ frutas.find(fruta=>{
+     if(fruta ==='sandia'){
+         console.log(fruta)
+     }
+ })
+ */
 
 //FOREACH:Por cada elemento nos recorre array 
-
-// frutas.forEach(fruta=>{
-//     if(fruta.length>5){
-//         console.log(fruta)
-//     }
-// })
-
+/*
+ frutas.forEach(fruta=>{
+     if(fruta.length>5){
+         console.log(fruta)
+     }
+ })
+*/
 //INCLUDES:Nos da true o false en función si 
 //existe ese elemento del array 
 
-// console.log(frutas.includes('banana'))
+ //console.log(frutas.includes('banana'))
 
 //INDEXOF:Nos devuelve un numero negativo si no 
 //encuentra el elemento en el array y si lo 
 //encuentra nos dice la posición que ocupa 
 
-// console.log(frutas.indexOf('uva'))
+ //console.log(frutas.indexOf('sandia'))
 
 
 //JOIN:Nos separa los elementos del array según 
 //le indiquemos 
-
-// console.log(frutas.join('-'))
-
+/*
+ console.log(frutas.join('-'))
+ document.write(frutas.join('<br>'))
+*/
 //LASTINDEXOF 
 
-// console.log(frutas.lastIndexOf('sandia'))
+ //console.log(frutas.lastIndexOf('sandia'))
 
 //LENGTH(propiedad)
-
-// let casa="chalet"
-// console.log(frutas.length)
-// console.log(casa.length)
-
+/*
+ let casa="chalet"
+ console.log(frutas.length)
+ console.log(casa.length)
+*/
 //MAP: nos itera arrays y arrays de objetos 
 // y nos devuelve un array 
+/*/
+let html = "<ul>";
 
+ empresa.map(em=>{
+     html+=`
+  
+         <li>
+            Id:${em.id}<br>
+            Nombre:${em.nombre}<br>
+            Apellidos:${em.apellidos}<br>
+            Edad:${em.edad}
 
-// empresa.map(em=>{
-//     document.body.innerHTML+=`
-    
-//      <ul> 
-//         <li>
-//            Id:${em.id}<br>
-//            Nombre:${em.nombre}<br>
-//            Apellidos:${em.apellidos}<br>
-//            Edad:${em.edad}
-
-//         </li>
-
-//      <ul>
-    
-    
-    
-//     `
-// })
+         </li> 
+     `
+ })
+ html += "</ul>"
+ document.write(html)
+ */
 
 //POP:Elimina el último elemento de un array  
 // y nos lo devuelve 
-
-// console.log(frutas.pop())
-// console.log(frutas)
+/*
+document.write(frutas+"<br>")
+ document.write("POP: "+frutas.pop()+"<br>")
+ document.write(frutas+"<br>")
+ document.write("POP: "+frutas.pop()+"<br>")
+ document.write(frutas+"<br>")
+*/
+ //console.log(frutas.pop())
+ //console.log(frutas)
 
 //PUSH:Agrega al final del array el nuevo elemento 
 //que le indiquemos y nos devuelve la longitud 
 //del array con el nuevo elemento 
-
-// console.log(frutas.push('fresa'))
-// console.log(frutas)
-
+/*
+document.write(frutas+"<br>")
+ console.log(frutas.push('fresa'))
+ document.write(frutas+"<br>")
+ console.log(frutas)
+*/
 
 //REDUCE: Reduce el array a un solo elemento 
-
-//  frutas.reduce(fruta=>{
-//      console.log(fruta)
-//  })
-
+/*
+  frutas.reduce(fruta=>{
+      console.log(fruta)
+  })
+*/
 //REVERSE:Nos devuelve el array invertido  
-
-// console.log(frutas.reverse())
-
+/*
+document.write(frutas+"<br>")
+ console.log(frutas.reverse())
+ document.write(frutas+"<br>")
+*/
 //SLICE:Nos devuelve los indices comprendidos 
 //entre el primer indice que le indiquemos y 
 //el segundo no incluido 
 
-// console.log(frutas.slice(1,4))
+ //console.log(frutas.slice(1,4))
 
 //SORT:Nos ordena el array alfabeticamente 
-
-// console.log(frutas.sort())
-
-
+let numeros = [9, 8, 5, 3, 4]
+/*
+ console.log(frutas.sort())
+console.log(numeros.sort())// Ascendente
+console.log(numeros.sort().reverse()) // Descendente
+*/
 //UNSHIFT:Nos agrega al principio del array el
 //elemento que le indiquemos  
-
-// console.log(frutas.unshift('mango'))
-// console.log(frutas)
-
+/*
+document.write(frutas+"<br>")
+ console.log(frutas.unshift('mango'))
+ document.write(frutas+"<br>")
+ console.log(frutas)
+*/
 //SHIFT:Nos elimina el primer elemento del array 
-
-// console.log(frutas.shift())
-// console.log (frutas)
-
+/*
+document.write(frutas+"<br>")
+ 
+console.log(frutas.shift())
+ 
+ document.write(frutas+"<br>")
+ console.log (frutas)
+*/
 
 //SPLICE:Nos da los elementos entre dos indices pero  
 //1.ponemos desde donde queremos que empieze a contar. 
 //2.cuantos elementos va a eliminar o sumar 
 //3.y  si va a sumar los que vaya a añadir 
+/*
+document.write(frutas+"<br>")
+ frutas.splice(0,4,'mango')
+frutas.splice(0,0,'aguacate','kiwi')
 
-// frutas.splice(0,4,'mango')
-// frutas.splice(0,0,'aguacate','kiwi')
+ document.write(frutas+"<br>")
+ 
 
-// console.log(frutas)  
+ console.log(frutas)  
+ */
